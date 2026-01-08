@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mack Benton - Professional Resume">
+    <title>Mack Benton - Resume</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="header-content">
+                <div class="profile-section">
+                    <div class="profile-image-container">
+                        <img src="profile.jpg" alt="Mack Benton" class="profile-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="profile-image-placeholder" style="display: none;">
+                            <span class="placeholder-icon">MB</span>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="name">Mack Benton</h1>
+                        <p class="profile-tagline">Finance Major at Santa Clara University (Junior)</p>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <a href="mailto:mackbenton@gmail.com" class="contact-link">
+                        <span>mackbenton@gmail.com</span>
+                    </a>
+                    <a href="tel:+14159902432" class="contact-link">
+                        <span>(415) 990-2432</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/william-benton-12x12144" target="_blank" class="contact-link">
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Experience Summary -->
+            <section class="experience-summary">
+                <h2 class="summary-title">Experience</h2>
+                <ul class="summary-list">
+                    <li>
+                        <a href="#" class="summary-link" data-job="skyline">
+                            <span class="summary-company">Skyline Construction</span> - <span class="summary-job">Project Engineer Intern</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="summary-link" data-job="dogpatch">
+                            <span class="summary-company">Dogpatch LLC</span> - <span class="summary-job">Leasing Representative</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="summary-link" data-job="irish-boat">
+                            <span class="summary-company">Irish Boat Shop</span> - <span class="summary-job">Solutions Specialist</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="summary-link" data-job="lake-merced">
+                            <span class="summary-company">Lake Merced Golf Club</span> - <span class="summary-job">Outside Services</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="summary-link" data-job="done-right">
+                            <span class="summary-company">Done Right Services</span> - <span class="summary-job">Founder</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Tab Navigation -->
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="experience">
+                        <span>Work Experience</span>
+                    </button>
+                    <button class="tab-button" data-tab="education">
+                        <span>Education</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Experience Tab -->
+                <div id="experience" class="tab-pane active">
+                    <section class="section">
+                        <h2 class="section-title">Work Experience</h2>
+                        
+                        <a href="experience-skyline.html" class="experience-item experience-link" id="job-skyline">
+                            <div class="experience-header">
+                                <div class="company-logo-container">
+                                    <img src="logos/skyline-construction.png" alt="Skyline Construction" class="company-logo" onerror="this.style.display='none';">
+                                </div>
+                                <div class="experience-header-text">
+                                    <h3 class="job-title">Project Engineer Intern</h3>
+                                    <a href="https://www.skylineconstruction.build" target="_blank" class="company-link" onclick="event.stopPropagation();">
+                                        <span class="company">Skyline Construction</span>
+                                    </a>
+                                    <span class="date">Summer 2025</span>
+                                </div>
+                            </div>
+                            <p class="location">San Francisco, California</p>
+                            <ul class="job-description">
+                                <li>Created and maintained comprehensive procurement schedules to track long-lead items and ensure timely delivery of critical materials</li>
+                                <li>Assisted in organizing and building Requests for Proposals (RFPs), supporting bid processes and subcontractor selection</li>
+                                <li>Collaborated with project managers to coordinate subcontractors, helping align schedules, scopes, and site logistics</li>
+                                <li>Managed RFIs and Submittals for assigned projects</li>
+                            </ul>
+                            <div class="read-more">Click to read more →</div>
+                        </a>
+
+                        <a href="experience-dogpatch.html" class="experience-item experience-link" id="job-dogpatch">
+                            <div class="experience-header">
+                                <div class="experience-header-text">
+                                    <h3 class="job-title">Leasing Representative</h3>
+                                    <span class="company">Dogpatch LLC</span>
+                                    <span class="date">Ongoing</span>
+                                </div>
+                            </div>
+                            <p class="location">San Francisco, California</p>
+                            <ul class="job-description">
+                                <li>Assisted with leasing multiple apartment units over the course of summer</li>
+                                <li>Represented ownership, presented space, managed advertising, and communicated with interested renters</li>
+                            </ul>
+                            <div class="read-more">Click to read more →</div>
+                        </a>
+
+                        <a href="experience-irish-boat.html" class="experience-item experience-link" id="job-irish-boat">
+                            <div class="experience-header">
+                                <div class="company-logo-container">
+                                    <img src="logos/irish-boat-shop.png" alt="Irish Boat Shop" class="company-logo" onerror="this.style.display='none';">
+                                </div>
+                                <div class="experience-header-text">
+                                    <h3 class="job-title">Solutions Specialist</h3>
+                                    <a href="https://www.irishboatshop.com" target="_blank" class="company-link" onclick="event.stopPropagation();">
+                                        <span class="company">Irish Boat Shop</span>
+                                    </a>
+                                    <span class="date">2021 - 2024 (Summer)</span>
+                                </div>
+                            </div>
+                            <p class="location">Harbor Springs, Michigan</p>
+                            <ul class="job-description">
+                                <li>Coordinated with team and boat owners to ensure timely launch and recovery of each boat</li>
+                                <li>Worked in retail fulfilling customers' needs ranging from apparel to marine-specific hardware</li>
+                                <li>Skillfully operated various pieces of equipment and tools including boats, tractors, trucks, and trailers</li>
+                                <li>Solved problems when boats were in distress and required immediate assistance</li>
+                            </ul>
+                            <div class="read-more">Click to read more →</div>
+                        </a>
+
+                        <a href="experience-lake-merced.html" class="experience-item experience-link" id="job-lake-merced">
+                            <div class="experience-header">
+                                <div class="company-logo-container">
+                                    <img src="logos/lake-merced-golf.png" alt="Lake Merced Golf Club" class="company-logo" onerror="this.style.display='none';">
+                                </div>
+                                <div class="experience-header-text">
+                                    <h3 class="job-title">Outside Services</h3>
+                                    <a href="https://www.lmgc.org" target="_blank" class="company-link" onclick="event.stopPropagation();">
+                                        <span class="company">Lake Merced Golf Club</span>
+                                    </a>
+                                    <span class="date">Summer/Fall 2024</span>
+                                </div>
+                            </div>
+                            <p class="location">San Francisco, California</p>
+                            <ul class="job-description">
+                                <li>Provided exceptional guest services to club members and built strong relationships with both members and colleagues</li>
+                                <li>Gained valuable experience in customer service and developed a professional demeanor, particularly when interacting with high-profile clientele</li>
+                            </ul>
+                            <div class="read-more">Click to read more →</div>
+                        </a>
+
+                        <a href="experience-done-right.html" class="experience-item experience-link" id="job-done-right">
+                            <div class="experience-header">
+                                <div class="experience-header-text">
+                                    <h3 class="job-title">Founder</h3>
+                                    <span class="company">Done Right Services (Handyman Business)</span>
+                                    <span class="date">2017 - Present</span>
+                                </div>
+                            </div>
+                            <p class="location">Burlingame, California</p>
+                            <ul class="job-description">
+                                <li>Launched a neighborhood-wide lawn care business in 6th grade, strategically reinvesting in equipment to expand both services and customer base</li>
+                                <li>Evolved the venture into a handyman business, completing a variety of projects including shed and fence construction, low-voltage lighting installation, plumbing repairs, and other general home improvement work</li>
+                                <li>Gained expertise in marketing and sales, reputation management, and managing complex projects</li>
+                            </ul>
+                            <div class="read-more">Click to read more →</div>
+                        </a>
+                    </section>
+                </div>
+
+                <!-- Education Tab -->
+                <div id="education" class="tab-pane">
+                    <section class="section">
+                        <h2 class="section-title">Education</h2>
+                        <div class="education-item">
+                            <div class="education-header-with-logo">
+                                <div class="school-logo-container">
+                                    <a href="https://www.scu.edu" target="_blank">
+                                        <img src="logos/santa-clara-university.png" alt="Santa Clara University" class="school-logo" onerror="this.style.display='none';">
+                                    </a>
+                                </div>
+                                <div class="education-info">
+                                    <h3 class="degree">Finance Major</h3>
+                                    <a href="https://www.scu.edu" target="_blank" class="school-link">
+                                        <span class="school">Santa Clara University</span>
+                                    </a>
+                                    <span class="date">2023 - 2027</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-header-with-logo">
+                                <div class="school-logo-container">
+                                    <a href="https://www.serrahs.com" target="_blank">
+                                        <img src="logos/serra-high-school.png" alt="Serra High School" class="school-logo" onerror="this.style.display='none';">
+                                    </a>
+                                </div>
+                                <div class="education-info">
+                                    <h3 class="degree">High School Diploma</h3>
+                                    <a href="https://www.serrahs.com" target="_blank" class="school-link">
+                                        <span class="school">Serra High School</span>
+                                    </a>
+                                    <span class="date">2019 - 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> Mack Benton. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
