@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mack Benton - Irish Boat Shop Experience">
+    <title>Irish Boat Shop - Mack Benton</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .detail-header {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .back-link {
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            transition: var(--transition);
+        }
+        .back-link:hover {
+            opacity: 1;
+            transform: translateX(-5px);
+        }
+        .detail-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="detail-header">
+            <a href="index.html" class="back-link">← Back to Resume</a>
+            <h1>Solutions Specialist</h1>
+            <h2 style="font-weight: 400; margin-top: 0.5rem;">Irish Boat Shop</h2>
+            <p style="margin-top: 0.5rem; opacity: 0.9;">2021 - 2024 (Summer) | Harbor Springs, Michigan</p>
+        </div>
+
+        <div class="detail-content">
+            <section class="section">
+                <h2 class="section-title">Overview</h2>
+                <p class="about-text">
+                    Over three summers at Irish Boat Shop in Harbor Springs, Michigan, I developed comprehensive skills in 
+                    marine operations, retail sales, and customer service. This role taught me the importance of attention 
+                    to detail, problem-solving under pressure, and maintaining excellent relationships with customers. I 
+                    operated various equipment and handled diverse responsibilities ranging from boat operations to retail sales.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Key Responsibilities</h2>
+                <div class="experience-item" style="pointer-events: none;">
+                    <ul class="job-description">
+                        <li>Coordinated with team and boat owners to ensure timely launch and recovery of each boat</li>
+                        <li>Worked in retail fulfilling customers' needs ranging from apparel to marine-specific hardware</li>
+                        <li>Skillfully operated various pieces of equipment and tools including boats, tractors, trucks, and trailers</li>
+                        <li>Solved problems when boats were in distress and required immediate assistance</li>
+                        <li>Ensured fantastic customer service by going above and beyond to help customers and maintain good relationships</li>
+                        <li>Maintained equipment and facilities to ensure safe operations</li>
+                        <li>Assisted with seasonal boat storage and preparation</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Skills Developed</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Technical Skills</h4>
+                        <div class="skills-list">
+                            <span class="skill-tag">Marine Operations</span>
+                            <span class="skill-tag">Equipment Operation</span>
+                            <span class="skill-tag">Retail Sales</span>
+                            <span class="skill-tag">Equipment Maintenance</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Soft Skills</h4>
+                        <div class="skills-list">
+                            <span class="skill-tag">Customer Service</span>
+                            <span class="skill-tag">Problem Solving</span>
+                            <span class="skill-tag">Teamwork</span>
+                            <span class="skill-tag">Adaptability</span>
+                            <span class="skill-tag">Communication</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> Mack Benton. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

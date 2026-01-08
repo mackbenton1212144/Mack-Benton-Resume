@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mack Benton - Skyline Construction Experience">
+    <title>Skyline Construction - Mack Benton</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .detail-header {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .back-link {
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            transition: var(--transition);
+        }
+        .back-link:hover {
+            opacity: 1;
+            transform: translateX(-5px);
+        }
+        .detail-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="detail-header">
+            <a href="index.html" class="back-link">← Back to Resume</a>
+            <h1>Project Engineer Intern</h1>
+            <h2 style="font-weight: 400; margin-top: 0.5rem;">Skyline Construction</h2>
+            <p style="margin-top: 0.5rem; opacity: 0.9;">Summer 2025 | San Francisco, California</p>
+        </div>
+
+        <div class="detail-content">
+            <section class="section">
+                <h2 class="section-title">Overview</h2>
+                <p class="about-text">
+                    During my internship at Skyline Construction, I gained hands-on experience in construction project management, 
+                    working directly with project managers, architects, and subcontractors. This role provided me with valuable 
+                    insights into the construction industry and strengthened my skills in project coordination, communication, and 
+                    technical software applications.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Key Responsibilities</h2>
+                <div class="experience-item" style="pointer-events: none;">
+                    <ul class="job-description">
+                        <li>Created and maintained comprehensive procurement schedules to track long-lead items and ensure timely delivery of critical materials</li>
+                        <li>Assisted in organizing and building Requests for Proposals (RFPs), supporting bid processes and subcontractor selection</li>
+                        <li>Collaborated with project managers to coordinate subcontractors, helping align schedules, scopes, and site logistics</li>
+                        <li>Assisted as a communication bridge between architects, owner's representatives, and trade partners, contributing to issue resolution and project clarity</li>
+                        <li>Participated in site walks and inspections, observing construction progress and verifying compliance with design, safety, and quality standards</li>
+                        <li>Participated in weekly meetings with building owners and project stakeholders, contributing updates and gaining exposure to high-level decision-making</li>
+                        <li>Managed RFIs and Submittals for assigned projects</li>
+                        <li>Utilized Procore for field coordination and document control, Microsoft Excel for tracking and reporting, and Bluebeam and the broader Microsoft Office Suite for markups, documentation, and communication</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Skills Developed</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Technical Skills</h4>
+                        <div class="skills-list">
+                            <span class="skill-tag">Procore</span>
+                            <span class="skill-tag">Microsoft Excel</span>
+                            <span class="skill-tag">Bluebeam</span>
+                            <span class="skill-tag">Project Management</span>
+                            <span class="skill-tag">Procurement</span>
+                            <span class="skill-tag">RFI Management</span>
+                            <span class="skill-tag">Construction Coordination</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Soft Skills</h4>
+                        <div class="skills-list">
+                            <span class="skill-tag">Communication</span>
+                            <span class="skill-tag">Teamwork</span>
+                            <span class="skill-tag">Problem Solving</span>
+                            <span class="skill-tag">Stakeholder Management</span>
+                            <span class="skill-tag">Attention to Detail</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> Mack Benton. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

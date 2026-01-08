@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mack Benton - Dogpatch LLC Experience">
+    <title>Dogpatch LLC - Mack Benton</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .detail-header {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .back-link {
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            transition: var(--transition);
+        }
+        .back-link:hover {
+            opacity: 1;
+            transform: translateX(-5px);
+        }
+        .detail-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="detail-header">
+            <a href="index.html" class="back-link">← Back to Resume</a>
+            <h1>Leasing Representative</h1>
+            <h2 style="font-weight: 400; margin-top: 0.5rem;">Dogpatch LLC</h2>
+            <p style="margin-top: 0.5rem; opacity: 0.9;">Ongoing | San Francisco, California</p>
+        </div>
+
+        <div class="detail-content">
+            <section class="section">
+                <h2 class="section-title">Overview</h2>
+                <p class="about-text">
+                    As a Leasing Representative for Dogpatch LLC, I work directly with property owners to manage apartment 
+                    unit leasing. This ongoing role has provided me with valuable experience in real estate operations, 
+                    customer relations, and sales. I've successfully assisted with leasing multiple units while representing 
+                    ownership interests and maintaining excellent communication with potential renters.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Key Responsibilities</h2>
+                <div class="experience-item" style="pointer-events: none;">
+                    <ul class="job-description">
+                        <li>Assisted with leasing multiple apartment units over the course of summer</li>
+                        <li>Represented ownership, presented space, managed advertising, and communicated with interested renters</li>
+                        <li>Coordinated property showings and maintained relationships with prospective tenants</li>
+                        <li>Managed advertising and marketing efforts for available units</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Skills Developed</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Real Estate Skills</h4>
+                        <div class="skills-list">
+                            <span class="skill-tag">Property Leasing</span>
+                            <span class="skill-tag">Sales & Marketing</span>
+                            <span class="skill-tag">Customer Relations</span>
+                            <span class="skill-tag">Property Presentations</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Soft Skills</h4>
+                        <div class="skills-list">
+                            <span class="skill-tag">Communication</span>
+                            <span class="skill-tag">Negotiation</span>
+                            <span class="skill-tag">Customer Service</span>
+                            <span class="skill-tag">Professional Presentation</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> Mack Benton. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
