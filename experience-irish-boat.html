@@ -11,39 +11,109 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         .detail-header {
-            background: var(--primary-gradient);
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.95), rgba(99, 102, 241, 0.95));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             color: white;
-            padding: 2rem;
-            margin-bottom: 2rem;
+            padding: var(--spacing-2xl) var(--container-padding-mobile);
+            margin-bottom: var(--spacing-2xl);
+            position: relative;
+            overflow: hidden;
+        }
+        .detail-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        }
+        .detail-header-content {
+            max-width: var(--max-content-width);
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .company-logo-detail {
+            display: flex;
+            justify-content: center;
+            margin: var(--spacing-lg) 0;
+        }
+        .company-logo-detail img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: var(--spacing-md);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .company-logo-detail img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 0 3px rgba(255, 255, 255, 0.2);
         }
         .back-link {
-            color: white;
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            margin-bottom: 1rem;
-            opacity: 0.9;
-            transition: var(--transition);
+            margin-bottom: var(--spacing-lg);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            font-size: 0.875rem;
+            font-weight: 500;
         }
         .back-link:hover {
-            opacity: 1;
+            background: rgba(255, 255, 255, 0.2);
             transform: translateX(-5px);
+            color: white;
+        }
+        .detail-header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            letter-spacing: -0.02em;
+        }
+        .detail-header h2 {
+            font-weight: 400;
+            font-size: 1.5rem;
+            margin-top: var(--spacing-xs);
+            opacity: 0.95;
+        }
+        .detail-header p {
+            margin-top: var(--spacing-sm);
+            opacity: 0.9;
+            font-size: 1rem;
         }
         .detail-content {
-            max-width: 800px;
+            max-width: var(--max-content-width);
             margin: 0 auto;
-            padding: 0 2rem 3rem;
+            padding: 0 var(--container-padding-mobile) var(--spacing-3xl);
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="detail-header">
-            <a href="index.html" class="back-link">← Back to Resume</a>
-            <h1>Solutions Specialist</h1>
-            <h2 style="font-weight: 400; margin-top: 0.5rem;">Irish Boat Shop</h2>
-            <p style="margin-top: 0.5rem; opacity: 0.9;">2021 - 2024 (Summer) | Harbor Springs, Michigan</p>
+            <div class="detail-header-content">
+                <a href="index.html" class="back-link">← Back to Resume</a>
+                <div class="company-logo-detail">
+                    <img src="logos/irish-boat-shop.png" alt="Irish Boat Shop" onerror="this.style.display='none';">
+                </div>
+                <h1>Solutions Specialist</h1>
+                <h2>Irish Boat Shop</h2>
+                <p>2021 - 2024 (Summer) | Harbor Springs, Michigan</p>
+            </div>
         </div>
 
         <div class="detail-content">
