@@ -18,6 +18,7 @@
     --color-border-light: #f0f0f0;
     --bg-primary: #ffffff;
     --bg-secondary: #eef2f6;
+    --bg-soft: #f8fafc;
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
@@ -54,10 +55,12 @@ body {
 
 /* Header Styles */
 .header {
-    background: var(--bg-primary);
-    border-bottom: 2px solid var(--color-navy);
+    background:
+        linear-gradient(135deg, rgba(30, 58, 138, 0.05), rgba(255, 255, 255, 0) 38%),
+        var(--bg-primary);
+    border-bottom: 1px solid rgba(30, 58, 138, 0.18);
     padding: var(--spacing-xl) var(--container-padding-mobile);
-    margin-bottom: var(--spacing-2xl);
+    margin-bottom: var(--spacing-xl);
 }
 
 .header-content {
@@ -68,21 +71,22 @@ body {
 
 .profile-section {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
-    padding-bottom: var(--spacing-lg);
-    border-bottom: 1px solid var(--color-border-light);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid rgba(30, 58, 138, 0.12);
 }
 
 .profile-image-container {
     width: 100px;
     height: 100px;
-    border-radius: 2px;
+    border-radius: 8px;
     overflow: hidden;
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(30, 58, 138, 0.18);
     background: var(--bg-secondary);
     flex-shrink: 0;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
 }
 
 .profile-image {
@@ -110,38 +114,46 @@ body {
 }
 
 .name {
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 2.15rem;
+    font-weight: 650;
     color: var(--color-text-primary);
-    margin-bottom: var(--spacing-xs);
-    letter-spacing: -0.02em;
+    margin-bottom: 0.35rem;
+    letter-spacing: 0;
+    line-height: 1.08;
 }
 
 .profile-tagline {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--color-text-secondary);
     font-weight: 400;
     margin-top: var(--spacing-xs);
+    max-width: 42rem;
 }
 
 .contact-info {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-md);
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
     font-size: 0.875rem;
 }
 
 .contact-link {
-    color: var(--color-text-secondary);
+    color: var(--color-navy-dark);
     text-decoration: none;
-    transition: color 0.2s ease;
-    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+    border: 1px solid rgba(30, 58, 138, 0.14);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.72);
+    padding: 0.45rem 0.75rem;
+    line-height: 1;
 }
 
 .contact-link:hover {
     color: var(--color-navy);
-    border-bottom-color: var(--color-navy);
+    border-color: rgba(30, 58, 138, 0.42);
+    background: var(--bg-primary);
+    transform: translateY(-1px);
 }
 
 /* Main Content */
@@ -155,7 +167,7 @@ body {
 
 /* Tab Navigation */
 .tabs-container {
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -190,7 +202,7 @@ body {
 }
 
 .tab-content {
-    margin-top: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
 }
 
 .tab-pane {
@@ -223,14 +235,22 @@ body {
 
 /* Experience Section */
 .experience-item {
-    margin-bottom: var(--spacing-xl);
-    padding-bottom: var(--spacing-xl);
-    border-bottom: 1px solid var(--color-border-light);
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--color-border-light);
+    border-radius: 8px;
+    background: var(--bg-primary);
+    box-shadow: 0 14px 35px rgba(15, 23, 42, 0.05);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.experience-item:hover {
+    border-color: rgba(30, 58, 138, 0.22);
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.08);
+    transform: translateY(-2px);
 }
 
 .experience-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
     margin-bottom: 0;
 }
 
@@ -243,14 +263,15 @@ body {
 }
 
 .company-logo-container {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg-primary);
-    border: 1px solid var(--color-border-light);
+    background: var(--bg-soft);
+    border: 1px solid rgba(30, 58, 138, 0.1);
+    border-radius: 8px;
     padding: var(--spacing-xs);
 }
 
@@ -266,11 +287,12 @@ body {
 }
 
 .job-title {
-    font-size: 1.125rem;
-    font-weight: 500;
+    font-size: 1.16rem;
+    font-weight: 650;
     color: var(--color-text-primary);
-    margin-bottom: var(--spacing-xs);
-    letter-spacing: -0.01em;
+    margin-bottom: 0.35rem;
+    letter-spacing: 0;
+    line-height: 1.25;
 }
 
 .company-link {
@@ -289,7 +311,7 @@ body {
 
 .company {
     color: var(--color-text-primary);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.95rem;
     display: inline-block;
     margin-right: var(--spacing-sm);
@@ -304,7 +326,7 @@ body {
 .location {
     color: var(--color-text-tertiary);
     font-size: 0.875rem;
-    margin: var(--spacing-xs) 0 var(--spacing-sm);
+    margin: 0.35rem 0 var(--spacing-sm);
     display: block;
     font-style: normal;
 }
@@ -312,12 +334,11 @@ body {
 .job-description {
     list-style: none;
     padding: 0;
-    margin: var(--spacing-sm) 0 0;
+    margin: 0.85rem 0 0;
 }
 
 .job-description li {
-    padding: var(--spacing-xs) 0;
-    padding-left: 1.25rem;
+    padding: 0.32rem 0 0.32rem 1.25rem;
     position: relative;
     color: var(--color-text-secondary);
     line-height: 1.7;
@@ -335,11 +356,11 @@ body {
 
 .expand-link {
     display: inline-block;
-    margin-top: var(--spacing-sm);
-    color: var(--color-text-tertiary);
+    margin-top: var(--spacing-md);
+    color: var(--color-navy);
     text-decoration: none;
     font-size: 0.875rem;
-    font-weight: 400;
+    font-weight: 600;
     transition: color 0.2s ease;
     border-bottom: 1px solid transparent;
 }
@@ -350,7 +371,7 @@ body {
 }
 
 .experience-summary-text {
-    margin-top: var(--spacing-sm);
+    margin-top: var(--spacing-xs);
 }
 
 /* Education Section */
@@ -523,7 +544,7 @@ body {
 /* Responsive Design - Tablet */
 @media (min-width: 768px) {
     .header {
-        padding: var(--spacing-xl) var(--container-padding-tablet);
+        padding: var(--spacing-xl) var(--container-padding-tablet) var(--spacing-lg);
     }
 
     .main-content {
@@ -535,14 +556,14 @@ body {
     }
 
     .name {
-        font-size: 2.25rem;
+        font-size: 2.5rem;
     }
 }
 
 /* Responsive Design - Desktop */
 @media (min-width: 1024px) {
     .header {
-        padding: var(--spacing-2xl) var(--container-padding-desktop);
+        padding: var(--spacing-2xl) var(--container-padding-desktop) var(--spacing-xl);
     }
 
     .main-content {
@@ -554,7 +575,7 @@ body {
     }
 
     .name {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .profile-section {
@@ -579,7 +600,7 @@ body {
 /* Responsive Design - Large Desktop */
 @media (min-width: 1440px) {
     .header {
-        padding: var(--spacing-2xl) var(--container-padding-large);
+        padding: var(--spacing-2xl) var(--container-padding-large) var(--spacing-xl);
     }
 
     .main-content {
@@ -591,7 +612,7 @@ body {
     }
 
     .name {
-        font-size: 2.75rem;
+        font-size: 3.2rem;
     }
 
     .profile-image-container {
@@ -612,41 +633,88 @@ body {
 /* Responsive Design - Mobile */
 @media (max-width: 767px) {
     .header {
-        padding: var(--spacing-lg) var(--container-padding-mobile);
-        margin-bottom: var(--spacing-lg);
+        padding: var(--spacing-md) var(--container-padding-mobile);
+        margin-bottom: var(--spacing-md);
     }
 
     .main-content {
-        padding: 0 var(--container-padding-mobile) var(--spacing-xl);
+        padding: 0 var(--container-padding-mobile) var(--spacing-lg);
     }
 
     .name {
-        font-size: 1.75rem;
+        font-size: 1.85rem;
     }
 
     .profile-section {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: var(--spacing-md);
+        align-items: center;
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-sm);
+        padding-bottom: var(--spacing-sm);
     }
 
     .profile-image-container {
-        width: 80px;
-        height: 80px;
+        width: 76px;
+        height: 76px;
     }
 
     .contact-info {
-        flex-direction: column;
-        gap: var(--spacing-xs);
+        gap: 0.55rem;
+        margin-top: var(--spacing-xs);
+    }
+
+    .contact-link {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8125rem;
+    }
+
+    .tabs-container {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .tab-content {
+        margin-top: var(--spacing-md);
+    }
+
+    .section-title {
+        margin-bottom: var(--spacing-md);
     }
 
     .experience-header {
-        flex-direction: column;
+        align-items: flex-start;
         gap: var(--spacing-sm);
     }
 
+    .experience-item {
+        padding: var(--spacing-md);
+        margin-bottom: var(--spacing-sm);
+        box-shadow: 0 8px 22px rgba(15, 23, 42, 0.04);
+    }
+
+    .experience-item:hover {
+        transform: none;
+    }
+
+    .company-logo-container,
+    .school-logo-container {
+        width: 46px;
+        height: 46px;
+    }
+
+    .job-description {
+        margin-top: var(--spacing-xs);
+    }
+
+    .job-description li {
+        line-height: 1.55;
+        padding-top: 0.24rem;
+        padding-bottom: 0.24rem;
+    }
+
+    .expand-link {
+        margin-top: var(--spacing-sm);
+    }
+
     .education-header-with-logo {
-        flex-direction: column;
         align-items: flex-start;
         gap: var(--spacing-sm);
     }
@@ -658,12 +726,17 @@ body {
 
 @media (max-width: 480px) {
     .name {
-        font-size: 1.5rem;
+        font-size: 1.65rem;
     }
 
     .job-title,
     .degree {
-        font-size: 1rem;
+        font-size: 1.05rem;
+    }
+
+    .profile-tagline {
+        font-size: 0.92rem;
+        line-height: 1.45;
     }
 
     .tabs {

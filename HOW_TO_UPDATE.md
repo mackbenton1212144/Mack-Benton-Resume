@@ -1,77 +1,46 @@
-# How to Update Files on GitHub (No Deletion Needed!)
+# How to Update and Publish
 
-## ✅ You DON'T Need to Delete Old Files!
+This is a simple static resume site. The main files are:
 
-GitHub will automatically **replace** files with the same name. Here's how:
+- `index.html`: homepage content
+- `styles.css`: layout and visual design
+- `script.js`: tabs and small interactions
+- `experience-*.html`: individual work experience detail pages
+- `logos/`: company and school logos
 
-## Method 1: Upload New Files (Easiest)
+## Local Preview
 
-1. Go to your GitHub repository
-2. Click **"Add file"** → **"Upload files"**
-3. Drag and drop your updated files:
-   - `index.html`
-   - `styles.css`
-   - `script.js`
-4. GitHub will show a message like:
-   - ⚠️ **"This file already exists"** or
-   - ⚠️ **"You're about to replace X files"**
-5. **Click "Commit changes"** anyway - it will replace the old files!
+From this folder, run:
 
-## Method 2: Edit Files Directly (Recommended)
+```bash
+python3 -m http.server 8087
+```
 
-This is actually easier and shows you what changed:
+Then open:
 
-1. Go to your repository on GitHub
-2. Click on the file you want to update (e.g., `styles.css`)
-3. Click the **pencil icon** (✏️) in the top right
-4. **Delete all the old code** (Cmd+A then Delete)
-5. **Paste your new code** (Cmd+V)
-6. Scroll down and click **"Commit changes"**
+```text
+http://localhost:8087
+```
 
-GitHub will automatically:
-- ✅ Replace the old file with the new one
-- ✅ Show you what changed (diff view)
-- ✅ Keep a history of all changes
+## Publish
 
-## Method 3: Replace Multiple Files at Once
+The GitHub repo is connected to Vercel. After changes look good locally:
 
-1. Go to your repository
-2. Click **"Add file"** → **"Upload files"**
-3. Drag and drop ALL your updated files:
-   - `index.html`
-   - `styles.css`
-   - `script.js`
-4. GitHub will show: **"You're about to replace 3 files"**
-5. Click **"Commit changes"** - it replaces them all!
+```bash
+git status
+git add .
+git commit -m "Update resume website"
+git push origin main
+```
 
-## What Happens to Old Files?
+Vercel should automatically redeploy the live site within a couple of minutes:
 
-- ✅ Old files are **automatically replaced**
-- ✅ Old versions are **saved in history** (you can see them anytime)
-- ✅ No manual deletion needed
-- ✅ GitHub handles everything automatically
+```text
+https://mack-benton-resume.vercel.app
+```
 
-## Quick Steps Summary
+## Notes
 
-**Option A: Upload (Fast)**
-1. Upload files with same names
-2. GitHub asks to replace → Click "Yes"
-3. Commit changes
-4. Done! ✅
-
-**Option B: Edit (Recommended)**
-1. Click file → Edit (pencil icon)
-2. Replace code
-3. Commit changes
-4. Done! ✅
-
-## Files You Need to Update
-
-Make sure to update these 3 files:
-- ✅ `index.html`
-- ✅ `styles.css` (this has all the fancy new styling!)
-- ✅ `script.js` (this has the animations!)
-
-## That's It!
-
-No deletion needed - just upload or edit, and GitHub does the rest! 🚀
+- Use the lowercase `logos/` folder for images.
+- Avoid adding another `Logos` file or folder, because that can conflict with `logos/` on Mac.
+- If the live site does not update right away, wait a minute and hard refresh the browser.
