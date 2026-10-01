@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mack Benton - Everpure Experience">
+    <title>Everpure - Mack Benton</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .detail-header {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.95), rgba(99, 102, 241, 0.95));
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            color: white;
+            padding: var(--spacing-2xl) var(--container-padding-mobile);
+            margin-bottom: var(--spacing-2xl);
+            position: relative;
+            overflow: hidden;
+        }
+        .detail-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        }
+        .detail-header-content {
+            max-width: var(--max-content-width);
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .company-logo-detail {
+            display: flex;
+            justify-content: center;
+            margin: var(--spacing-lg) 0;
+        }
+        .company-logo-detail img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: var(--spacing-md);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .company-logo-detail img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3), 0 0 0 3px rgba(255, 255, 255, 0.2);
+        }
+        .back-link {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: var(--spacing-lg);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-5px);
+            color: white;
+        }
+        .detail-header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            letter-spacing: -0.02em;
+        }
+        .detail-header h2 {
+            font-weight: 400;
+            font-size: 1.5rem;
+            margin-top: var(--spacing-xs);
+            opacity: 0.95;
+        }
+        .detail-header p {
+            margin-top: var(--spacing-sm);
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+        .detail-content {
+            max-width: var(--max-content-width);
+            margin: 0 auto;
+            padding: 0 var(--container-padding-mobile) var(--spacing-3xl);
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="detail-header">
+            <div class="detail-header-content">
+                <a href="index.html" class="back-link">&larr; Back to Resume</a>
+                <div class="company-logo-detail">
+                    <img src="logos/pure-storage.svg" alt="Everpure" onerror="this.style.display='none';">
+                </div>
+                <h1>Global Supply Chain Operations Intern</h1>
+                <h2>Everpure</h2>
+                <p>Jun 2026 - Sep 2026 | Santa Clara, California, United States | On-site</p>
+            </div>
+        </div>
+
+        <div class="detail-content">
+            <section class="section">
+                <h2 class="section-title">Overview</h2>
+                <p class="about-text">
+                    At Everpure, I worked as the team's solo intern. I conducted
+                    supplier risk assessments, translated the resulting framework into software, and built tools that gave
+                    leadership clearer visibility into supplier exposure, component risk, and procurement decisions.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Key Contributions</h2>
+                <div class="experience-item" style="pointer-events: none;">
+                    <ul class="job-description">
+                        <li>Conducted comprehensive risk assessments across Everpure's global supplier base, covering financial health, geopolitical exposure, sourcing depth, and lead time</li>
+                        <li>Developed a multi-factor supplier risk framework and built it into production-ready software for the Critical Components team's workflow</li>
+                        <li>Built Risk Radar, a live dashboard that scores 2,400+ components across 70+ suppliers by risk tier</li>
+                        <li>Integrated four enterprise data systems with AI research that cites its sources for supplier and component context</li>
+                        <li>Added a plain-English assistant for querying, bulk-editing, and exporting data, with every change previewed, approved by a person, and reversible</li>
+                        <li>Built a BOM upload tool that risk-scores uploaded bills of materials in minutes</li>
+                        <li>Built a hardware configuration tool that shows real cost breakdowns from live enterprise pricing data</li>
+                        <li>Delivered automated nightly refresh, disaster recovery, and full handoff documentation</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Skills Applied</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Supply Chain</h4>
+                        <div class="skills-list">
+                            <span class="skill-tag">Supplier Risk</span>
+                            <span class="skill-tag">Procurement Analytics</span>
+                            <span class="skill-tag">BOM Analysis</span>
+                            <span class="skill-tag">Component Risk Scoring</span>
+                            <span class="skill-tag">Sourcing Strategy</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Technical</h4>
+                        <div class="skills-list">
+                            <span class="skill-tag">Dashboard Development</span>
+                            <span class="skill-tag">Data Integration</span>
+                            <span class="skill-tag">AI-Assisted Research</span>
+                            <span class="skill-tag">Automation</span>
+                            <span class="skill-tag">Documentation</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; <span id="current-year"></span> Mack Benton. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
