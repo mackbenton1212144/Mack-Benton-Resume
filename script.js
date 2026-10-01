@@ -26,4 +26,31 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    const copyContacts = document.querySelectorAll('.copy-contact');
+
+    copyContacts.forEach(contact => {
+        contact.addEventListener('click', async function(event) {
+            const value = this.getAttribute('data-copy-value');
+            const hint = this.querySelector('.copy-hint');
+
+            if (!value || !navigator.clipboard) {
+                return;
+            }
+
+            event.preventDefault();
+
+            try {
+                await navigator.clipboard.writeText(value);
+                if (hint) {
+                    hint.textContent = 'Copied';
+                    window.setTimeout(() => {
+                        hint.textContent = 'Click to copy';
+                    }, 1400);
+                }
+            } catch (error) {
+                window.location.href = this.href;
+            }
+        });
+    });
 });

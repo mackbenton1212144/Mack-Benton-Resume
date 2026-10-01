@@ -156,6 +156,36 @@ body {
     transform: translateY(-1px);
 }
 
+.copy-contact {
+    position: relative;
+    cursor: copy;
+}
+
+.copy-hint {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 0.55rem);
+    transform: translate(-50%, 0.25rem);
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    color: var(--bg-primary);
+    background: var(--color-navy-dark);
+    border-radius: 6px;
+    padding: 0.38rem 0.5rem;
+    font-size: 0.72rem;
+    font-weight: 500;
+    line-height: 1;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.18);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.copy-contact:hover .copy-hint,
+.copy-contact:focus-visible .copy-hint {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
 /* Main Content */
 .main-content {
     flex: 1;
